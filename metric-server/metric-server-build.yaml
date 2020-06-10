@@ -159,6 +159,7 @@ spec:
         - --cert-dir=/tmp
         - --logtostderr
         - --secure-port=8443
+        - --kubelet-insecure-tls
         image: k8s.gcr.io/metrics-server-amd64:v0.3.6
         imagePullPolicy: IfNotPresent
         livenessProbe:

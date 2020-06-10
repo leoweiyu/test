@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: metric-server-metrics-server
+  namespace: kube-system
+spec:
+  template:
+    spec:
+      containers:
+        - name: metrics-server
+          command:
+            - /metrics-server
+            - --cert-dir=/tmp
+            - --logtostderr
+            - --secure-port=8443
+            - --kubelet-insecure-tls 
